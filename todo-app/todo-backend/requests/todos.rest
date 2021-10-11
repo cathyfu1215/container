@@ -1,0 +1,54 @@
+GET http://localhost:3000/todos
+
+###
+POST http://localhost:3000/todos
+Content-type: application/json
+
+{
+    "text": "make breakfast ",
+    "done":false
+}
+###
+POST http://localhost:3000/todos
+Content-type: application/json
+
+{
+    "text": "make lunch ",
+    "done":false
+}
+
+###
+POST http://localhost:3000/todos
+Content-type: application/json
+
+{
+    "text": "make dinner ",
+    "done":false
+}
+
+
+###
+DELETE http://localhost:3000/todos/6163928a66fdc407edaa05b6
+
+###
+DELETE http://localhost:3000/todos/6163940b66fdc407edaa05e9
+
+
+###
+PUT http://localhost:3000/todos/616393fd66fdc407edaa05e6
+Content-type: application/json
+
+{
+    "text": "make breakfast",
+    "done":true
+}
+
+###
+PUT http://localhost:3000/todos/616398885a2d4c0cbd9a565b
+Content-type: application/json
+
+{
+    "text": "make lunch",
+    "done":true
+}
+
