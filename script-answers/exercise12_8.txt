@@ -1,0 +1,71 @@
+Script started on Mon Oct 11 11:15:52 2021
+Restored session: Mon Oct 11 11:07:37 CST 2021
+[1m[7m%[27m[1m[0m                                                                                                                                                    ]7;file://Tsongs-MacBook-Pro.local/Users/tsongf/part1205/todo-app/todo-backend[0m[27m[24m[Jtsongf@Tsongs-MacBook-Pro todo-backend % [K[?2004hddocker containt er ls[?2004l
+CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS                                         NAMES
+79149a656d76   nginx     "/docker-entrypoint.…"   17 minutes ago   Up 17 minutes   0.0.0.0:8080->80/tcp, :::8080->80/tcp         vigorous_chebyshev
+ae43a7b5d5e6   mongo     "docker-entrypoint.s…"   2 hours ago      Up 2 hours      0.0.0.0:3456->27017/tcp, :::3456->27017/tcp   todo-backend_mongo_1
+[1m[7m%[27m[1m[0m                                                                                                                                                    ]7;file://Tsongs-MacBook-Pro.local/Users/tsongf/part1205/todo-app/todo-backend[0m[27m[24m[Jtsongf@Tsongs-MacBook-Pro todo-backend % [K[?2004hddocer ex     d  [7m docker exec -it todo-backend_mongo_1 mongo -u root -p example[27m
+[K[A[41C[27m [27md[27mo[27mc[27mk[27me[27mr[27m [27me[27mx[27me[27mc[27m [27m-[27mi[27mt[27m [27mt[27mo[27md[27mo[27m-[27mb[27ma[27mc[27mk[27me[27mn[27md[27m_[27mm[27mo[27mn[27mg[27mo[27m_[27m1[27m [27mm[27mo[27mn[27mg[27mo[27m [27m-[27mu[27m [27mr[27mo[27mo[27mt[27m [27m-[27mp[27m [27me[27mx[27ma[27mm[27mp[27ml[27me[1B[K[?2004l
+MongoDB shell version v5.0.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("c6d52349-5b81-4c3c-98ff-bcba917c640b") }
+MongoDB server version: 5.0.3
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_Databa[3G[Juse the_Datab[16G[3G[Juse the_Data[15G[3G[Juse the_Dat[14G[3G[Juse the_Da[13G[3G[Juse the_D[12G[3G[Juse the_[11Gdatabase[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> db.todos.find()[3G[Jdb.todos.find[1;34m([0m)[17G[3G[Jdb.todos.find([1;34m{[0m)[18G[3G[Jdb.todos.find[1;34m([0m{})[19G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("616393fd66fdc407edaa05e6"), "text" : "make breakfast", "done" : true }
+{ "_id" : ObjectId("616398885a2d4c0cbd9a565b"), "text" : "make lunch", "done" : true, "__v" : 0 }
+{ "_id" : ObjectId("61639aad0b27d10e55ff282d"), "text" : "make dinner ", "done" : false, "__v" : 0 }
+{ "_id" : ObjectId("6163ab98de54d936e9cbf2d3"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> db.todos.insertOne({[3G[Jdb.todos.insertOne({[23G
+... ... "text":"Increase the number of tools in my toolbelt",[5G[J... "text":"Increase the number of tools in my toolbelt",[62G
+... ... "done":false})[5G[J... "done":false})[22G[5G[J... "done":false})[21G[5G[J... "done":false})[20G[5G[J... "done":false})[19G[5G[J... "done":false})[18G[5G[J... "done":false})[17G[5G[J... "done":false})[16G[5G[J... "done":false})[15G[5G[J... "done":false})[14G[5G[J... "done":false})[13G[5G[J... "done":false})[12G[5G[J... "done":false})[11G[5G[J... "done":false})[10G[5G[J... "done":false})[9G[5G[J... "done":false})[8G[5G[J... "done":false})[7G[5G[J... "done":false})[6G[5G[J... "done":false})[5G[5G[Jdb.todos.find({})[22G[5G[Jdb.todos.find({}[21G[5G[Jdb.todos.find({[20G[5G[Jdb.todos.find([19G[5G[Jdb.todos.find[18G[5G[Jdb.todos.fin[17G[5G[Jdb.todos.fi[16G[5G[Jdb.todos.f[15G[5G[Jdb.todos.[14G[5G[Jdb.todos[13G[5G[Jdb.todo[12G[5G[Jdb.tod[11G[5G[Jdb.to[10G[5G[Jdb.t[9G[5G[Jdb.[8G[5G[Jdb[7G[5G[Jd[6G[5G[J[5G... "done":false)}[5G[J... "done":false)}[23G
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):3:12
+> db.todos.insertOne({[3G[Jdb.todos.insertOne({[23G
+... ... "text":"Increase the number of tools in my toolbelt",[5G[J... "text":"Increase the number of tools in my toolbelt",[62G
+... ... "done":false})[5G[J... "done":false})[23G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("6163acdf823d3fce10efa6ba")
+}
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("616393fd66fdc407edaa05e6"), "text" : "make breakfast", "done" : true }
+{ "_id" : ObjectId("616398885a2d4c0cbd9a565b"), "text" : "make lunch", "done" : true, "__v" : 0 }
+{ "_id" : ObjectId("61639aad0b27d10e55ff282d"), "text" : "make dinner ", "done" : false, "__v" : 0 }
+{ "_id" : ObjectId("6163ab98de54d936e9cbf2d3"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+{ "_id" : ObjectId("6163acdf823d3fce10efa6ba"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+[1m[7m%[27m[1m[0m                                                                                                                                                    ]7;file://Tsongs-MacBook-Pro.local/Users/tsongf/part1205/todo-app/todo-backend[0m[27m[24m[Jtsongf@Tsongs-MacBook-Pro todo-backend % [K[?2004heexit[?2004l
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Mon Oct 11 11:18:13 2021
