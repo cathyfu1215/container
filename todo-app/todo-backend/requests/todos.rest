@@ -26,12 +26,21 @@ Content-type: application/json
     "done":false
 }
 
+###
+POST http://localhost:3000/todos
+Content-type: application/json
+
+{
+    "text": "make meat dish ",
+    "done":false
+}
+
 
 ###
-DELETE http://localhost:3000/todos/6163928a66fdc407edaa05b6
+DELETE http://localhost:3000/todos/6163d97be7969f28e0f2e2fc
 
 ###
-DELETE http://localhost:3000/todos/6163940b66fdc407edaa05e9
+DELETE http://localhost:3000/todos/6164e99937a6bd35b3c1c04c
 
 
 ###
